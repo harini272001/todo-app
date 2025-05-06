@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout, Typography } from 'antd';
+import AddTodo from './components/AddTodo';
+import TodoList from './features/todos/TodoList';
 
-function App() {
+const { Content, Footer } = Layout;
+const { Title } = Typography;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{ minHeight: '100vh', background: '#f0f2f5' }}>
+      <Content
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '40px',
+          textAlign: 'center',
+        }}
+      >
+        <Title style={{ marginBottom: '40px', fontSize: '36px', color: '#1890ff' }}>
+          📝 ToDo List
+        </Title>
+        <div style={{ width: '100%', maxWidth: '600px' }}>
+          <AddTodo />
+          <TodoList />
+        </div>
+      </Content>
+
+      <Footer style={{ textAlign: 'center' }}>© 2025 YourName</Footer>
+    </Layout>
   );
-}
+};
 
 export default App;
