@@ -28,7 +28,7 @@ const App = () => {
         </div>
       </Content>
 
-      <Footer style={{ textAlign: 'center' }}>© 2025 YourName</Footer>
+      <Footer style={{ textAlign: 'center' }}>© 2025 Harini R</Footer>
     </Layout>
   );
 };
